@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * Myriam Castillo Zavala;
  * @author LAB07
  * Fecha: Noviembre 10  2017
- * Programa: Pruebajava2 
+ * Programa: Pruebajava3 
  * Responsabilidad: Aplicaciones Escritorio Java
  ************************************/
 public class conexionBD
@@ -57,4 +57,9 @@ public class conexionBD
           System.out.println("Conexion Finalizada");
         }
     }
+
+   
+
+        
+    
 }
