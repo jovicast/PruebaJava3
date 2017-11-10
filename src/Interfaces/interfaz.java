@@ -5,10 +5,13 @@
  */
 package Interfaces;
 
-/**
- *
+/************************************
+ * Myriam Castillo Zavala;
  * @author LAB07
- */
+ * Fecha: Noviembre 06  2017
+ * Programa: Pruebajava2 
+ * Responsabilidad: Aplicaciones Escritorio Java
+ ************************************/
 public class interfaz {
     
 }
