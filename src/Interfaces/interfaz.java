@@ -66,7 +66,7 @@ public class interfaz extends JFrame
      {
      public void actionPerformed(ActionEvent evt)
      {
-      con.deaconectar();
+      con.desconectar();
      }
 
      });
