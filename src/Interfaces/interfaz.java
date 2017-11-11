@@ -8,6 +8,7 @@ import javax.swing.*;//Importamos TODO de swing
 import java.awt.*;
 //IMPORTAR  LA CLASE CONEXION
 import bd2.conexionBD;
+import java.sql.Connection;
 import java.awt.event.*;
 
 /************************************
@@ -26,8 +27,8 @@ public class interfaz extends JFrame
     JButton boton; 
     JButton boton2;
     
-    //CREAR UN OBJETO DE CONEXION
-    ConexionBD con;
+   
+    conexionBD con;
     
     public interfaz()
     {
@@ -50,17 +51,18 @@ public class interfaz extends JFrame
        boton.setText("Conectar");
        boton2.setText("Desconectar");
        panel.setBackground(Color.gray);//Color de fondo de JPanel
+       
        //AGREGAR RSCUCHADORES AL BOTON 
        
-       boton.addActionlistener(new ActionListener()
+       boton.addActionListener(new ActionListener()
        {
            public void actionPerformed(ActionEvent evt)
            {
        ConexionBD con = new ConexionBD();
-        Connetion reg = con.conectar();
+        Connection reg = con.conectar();
        }
     });
-        boton2.addActionlistener(new ActionListener()
+        boton2.addActionListener(new ActionListener()
      {
      public void actionPerformed(ActionEvent evt)
      {

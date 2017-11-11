@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package pruebajava3;
-import interfaces.interfaz;
+import Interfaces.interfaz;
 import javax.swing.JFrame;
 
 /************************************
@@ -22,8 +22,8 @@ public class PruebaJava3
      */
     public static void main(String[] args) 
     {
-      Interfaz w = new Interfaz();
-      w.setVisible(gray);
+      interfaz w = new interfaz();
+      w.setVisible(true);
       w.setBounds(0, 0, 300, 0x1f4);
        w.SetTitle("Tercera Evaluacion Sumativa");
       
