@@ -39,7 +39,7 @@ public class conexionBD
         }
         catch(ClassNotFoundException | SQLException e)
         {
-         System.out.println("Error en la Conexion");
+         System.out.println("Conexion tuvo exito");
         }
     }
     

@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package Interfaces;
-import java.awt.Color;
 import javax.swing.*;//Importamos TODO de swing
+import java.awt.*;
+//IMPORTAR  LA CLASE CONEXION
 import bd2.conexionBD;
-import java.sql.Connection;
 import java.awt.event.*;
 
 /************************************
@@ -19,45 +19,57 @@ import java.awt.event.*;
  ************************************/
 public class interfaz extends JFrame
 {
- //PASO 3 - DECLARAR ELEMENTOS A UTILIZAR
+ 
     JPanel panel;
     JLabel label;
     JTextField text;
     JButton boton; 
     JButton boton2;
     
-    // PASO 4 - DEFINIR EL CONSTRUCTOR 
+    //CREAR UN OBJETO DE CONEXION
     ConexionBD con;
     
     public interfaz()
     {
-    //PASO 5 - CREAR E INICIALIZAR LOS OBJETOS
-        panel = new JPanel();//Creo un objeto Tipo JPanel
+    
+        panel = new JPanel();
         label = new JLabel();
-        text = new JTextField(15);//15 es la cantidad de caracteres
+        text = new JTextField(20);
         boton = new JButton();  
         boton2 = new JButton();
         
-         //PASO 6 - AGREGAR LOS ELEMENTOS AL JFRAME
-       this.add(panel);//Recomendable el JPanel
+         
+        this.add(panel);
        panel.add(label);
        panel.add(text);
        panel.add(boton);
        panel.add(boton2);
        
-       //PASO 7 - PROPIEDADES DE LOS OBJETOS
+       
        label.setText("Atributo");
        boton.setText("Conectar");
        boton2.setText("Desconectar");
        panel.setBackground(Color.gray);//Color de fondo de JPanel
+       //AGREGAR RSCUCHADORES AL BOTON 
+       
+       boton.addActionlistener(new ActionListener()
+       {
+           public void actionPerformed(ActionEvent evt)
+           {
+       ConexionBD con = new ConexionBD();
+        Connetion reg = con.conectar();
+       }
+    });
+        boton2.addActionlistener(new ActionListener()
+     {
+     public void actionPerformed(ActionEvent evt)
+     {
+      con.deaconectar();
+     }
+
+     });
+       
         
     }
 
-    public void SetTitle(String mi_primera_interfaz_JavaSwing) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }   
-
-    private void add(JPanel panel) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
